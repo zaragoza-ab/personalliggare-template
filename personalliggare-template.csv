@@ -1,0 +1,3 @@
+arbetsplats_adress,byggherre_namn,byggherre_orgnr,arbetsgivare_namn,arbetsgivare_orgnr,person_namn,person_id,incheckning,utcheckning,id06_nummer,roll,underentreprenor
+"Exempelgatan 12, 25220 Helsingborg","Anna Andersson","","Zaragoza AB","XXXXXX-XXXX","Lars Larsson","19801215-XXXX","2026-04-17 07:00","2026-04-17 16:00","123456","Snickare",false
+"Exempelgatan 12, 25220 Helsingborg","Anna Andersson","","VVS Teknik AB","XXXXXX-XXXX","Jan Jansson","19750503-XXXX","2026-04-17 09:00","2026-04-17 15:30","789012","VVS-montör",true

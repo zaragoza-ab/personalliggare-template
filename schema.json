@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/zaragoza-ab/personalliggare-template/schema.json",
+  "title": "Personalliggare (Swedish construction personnel register)",
+  "description": "Skatteverket-compliant schema for construction site personnel register per SFS 2014:1474",
+  "type": "object",
+  "required": ["arbetsplats", "entries"],
+  "properties": {
+    "arbetsplats": {
+      "type": "object",
+      "required": ["adress", "byggherre_namn"],
+      "properties": {
+        "adress": { "type": "string", "minLength": 5 },
+        "byggherre_namn": { "type": "string" },
+        "byggherre_orgnr": { "type": "string", "pattern": "^\\d{6}-\\d{4}$" },
+        "byggherre_personnr": { "type": "string", "pattern": "^\\d{8}-\\d{4}$" },
+        "byggkostnad_sek": { "type": "number", "minimum": 0 },
+        "startdatum": { "type": "string", "format": "date" },
+        "slutdatum": { "type": "string", "format": "date" }
+      }
+    },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["person_namn", "person_id", "arbetsgivare_namn", "incheckning"],
+        "properties": {
+          "person_namn": { "type": "string", "minLength": 3 },
+          "person_id": {
+            "type": "string",
+            "description": "Personnummer eller samordningsnummer",
+            "pattern": "^\\d{8}-\\d{4}$"
+          },
+          "arbetsgivare_namn": { "type": "string" },
+          "arbetsgivare_orgnr": { "type": "string", "pattern": "^\\d{6}-\\d{4}$" },
+          "incheckning": { "type": "string", "format": "date-time" },
+          "utcheckning": { "type": "string", "format": "date-time" },
+          "id06_nummer": { "type": "string" },
+          "roll": { "type": "string" },
+          "underentreprenor": { "type": "boolean" }
+        }
+      }
+    }
+  }
+}
