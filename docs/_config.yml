@@ -1,0 +1,12 @@
+title: "Personalliggare Template"
+description: "Electronic personnel register templates per Skatteverket rules"
+theme: jekyll-theme-cayman
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+url: "https://zaragoza-ab.github.io"
+baseurl: "/personalliggare-template"
+author:
+  name: "Zaragoza AB"
+  email: "info@zaragoza.se"
+  url: "https://zaragoza.se"
